@@ -98,6 +98,7 @@ services:
       ALPINE_DATABASE_DRIVER: "org.postgresql.Driver"
       ALPINE_DATABASE_USERNAME: "dtrack"
       ALPINE_DATABASE_PASSWORD: "dtrack"
+      EXTRA_JAVA_OPTIONS: "-Xmx4G"
     deploy:
       resources:
         limits:
