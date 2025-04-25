@@ -111,7 +111,7 @@ services:
     - '8081:8080'
     healthcheck:
       test: curl --fail -s http://127.0.0.1:8081 || exit 1
-      interval: 15s
+      interval: 1500s
       timeout: 10s
       retries: 3
     volumes:
