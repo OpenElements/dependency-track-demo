@@ -121,9 +121,6 @@ services:
 
   frontend:
     image: dependencytrack/frontend
-    depends_on:
-      apiserver:
-        condition: service_healthy
     environment:
       # The base URL of the API server.
       # NOTE:
