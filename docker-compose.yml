@@ -145,13 +145,14 @@ services:
       POSTGRES_DB: "dtrack"
       POSTGRES_USER: "dtrack"
       POSTGRES_PASSWORD: "dtrack"
+      PGDATA: "/var/lib/postgresql/data/db-files"
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}" ]
       interval: 5s
       timeout: 3s
       retries: 3
     volumes:
-    - "/dependencytrack-data:/var/lib/postgresql/data/db-files"
+    - "/dependencytrack-data:/var/lib/postgresql/data"
     restart: unless-stopped
 
 volumes:
