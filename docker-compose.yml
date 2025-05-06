@@ -151,11 +151,8 @@ services:
       timeout: 3s
       retries: 3
     volumes:
-    - "dependencytrack-data:/var/lib/postgresql/data"
+    - "./dependencytrack-data:/var/lib/postgresql/data"
     restart: unless-stopped
 
 volumes:
   dtrack-data: {}
-  dependencytrack-data: {
-    external: true
-  }
