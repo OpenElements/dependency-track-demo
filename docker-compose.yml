@@ -156,3 +156,6 @@ services:
 
 volumes:
   dtrack-data: {}
+  dependencytrack-data: {
+    external: true
+  }
